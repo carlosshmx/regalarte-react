@@ -7,12 +7,16 @@ export function Saludo({ title, name = "user" }) {
   );
 }
 
-export function UserCard(props) {
+export function UserCard({name, ammont, married, address, greet}) {
   return (
     <div>
-      <h1>{props.name}</h1>
-      <p>💰{props.ammont}</p>
-      <p>{props.married ? "Married" : "Single"}</p>
+      <h1>{name}</h1>
+      <p>💰{ammont}</p>
+      <p>{married ? "Married" : "Single"}</p>
+      <ul>
+        <li>City: {address.city}</li>
+        <li>Address: {address.street}</li>
+      </ul>
     </div>
   );
 }
