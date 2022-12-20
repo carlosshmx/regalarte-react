@@ -1,32 +1,43 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Saludo, UserCard } from "./saludo";
+import { Saludo, UserCard } from "./Saludo";
 import Product from "./product";
 import { Button } from "./Button";
+import { TaskCard } from "./Task";
+import { Saludar } from "./Saludar";
+import { Post } from "./Post";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+const handleChange = (e) => { console.log(e.target.value) }
+
+const users = [
+  {
+    id: 1,
+    name: "Carlos Colmenares",
+    image: "https://robohash.org/user1"
+  },
+  {
+    id: 2,
+    name: "Henry Bracho",
+    image: "https://robohash.org/user2"
+  },
+  {
+    id: 2,
+    name: "Mario Grimaldi",
+    image: "https://robohash.org/user3"
+  }
+]
+
 root.render(
   <>
-    <Button text="Click me"/>
-    <Button text="Buy"/>
-    <Button text="Sell" name="carlos"/>
-
-    {/* <UserCard
-      name="Carlos"
-      ammont={3000}
-      married={true}
-      points={[99, 33.3, 22.2]}
-      address={{ street: "123 main", city: "New York" }}
-      greet={function(){alert("Hello")}}
-    />
-    <UserCard
-      name="Jose"
-      ammont={2000}
-      married={false}
-      points={[100, 20]}
-      address={{ street: "jar 1486", city: "Tokyo" }}
-      greet={function(){alert("Hello")}}
-    /> */}
+    {users.map((user, i) => {
+      return (
+        <div key={i}>
+          <h1 >{user.name}</h1>
+          <img src={user.image} />
+        </div>
+      );
+    })}
   </>
 );
