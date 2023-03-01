@@ -4,7 +4,6 @@ import { tasks as data } from "../data/task";
 export const TaskContex = createContext()
 
 export function TaskContexProvider(props) {
-
   const [tasks, setTasks] = useState([]);
 
   function createTask(task){
@@ -23,13 +22,10 @@ export function TaskContexProvider(props) {
     document.getElementById("form-modal").classList.add("invisible");
   }
 
-
   useEffect(()=>{
     setTasks(data)
   }, [])
-
   
-
   return (
    <TaskContex.Provider value={{
     tasks,

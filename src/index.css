@@ -3,7 +3,8 @@
 }
 
 .regalarte-nav-logo{
-    width: 10rem;
+    width: 9rem;
+    object-fit: contain;
 }
 
 .pink-regalarte{
@@ -14,7 +15,7 @@
     background-color: #C11B53;
 }
 
-.cart-icon:hover{
+.icon-shadow:hover{
     background-color: #ff4a87;
     box-shadow: #C11B53 0px 5px 15px;
 }
@@ -28,4 +29,8 @@
     width: 1rem;
     height: 15rem;
     object-fit: contain;
+}
+
+.home-card{
+    width: 18rem;
 }

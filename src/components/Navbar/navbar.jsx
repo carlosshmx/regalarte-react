@@ -1,33 +1,21 @@
-import NavLinks from "./NavLinks";
-
-let links = [
-  {
-    id: 1,
-    text: "Home",
-    mark: true,
-  },
-  {
-    id: 2,
-    text: "Servicios",
-    mark: false,
-  },
-  {
-    id: 3,
-    text: "Contacto",
-    mark: false,
-  },
-];
 
 function NavBar() {
   return (
     <>
-    <ul className="d-flex justify-content-evenly gap-3 px-4 py mb-0 pt-3 pb-2 mainNav">
-      <li>
-      <img className=" regalarte-nav-logo" src="https://res.cloudinary.com/carlosshmc/image/upload/v1677018362/regalarte_letras_nml55d.png" alt="" />
-      </li>
-   
-    <li className="nav-item col-md-12 col-lg-7 position-relative">
-            <form className="d-flex justify-content-end" role="search">
+   <div className="container mt-3 mb-0 mb-md-2 px-2 my-lg-3">
+      <div className="position-relative row">
+            <div className="col-6 col-md-2">
+            <img className="regalarte-nav-logo" src="https://res.cloudinary.com/carlosshmc/image/upload/v1677018362/regalarte_letras_nml55d.png" alt="" />
+            </div>
+            
+            
+            <div className="col-6 col-md-2 d-flex justify-content-end order-sm-2">
+              <button type="button" className="bg-pink-regalarte icon-shadow btn position-relative me-3 me-md-2 me-lg-0">
+              <i className=" text-white fa-solid fa-cart-shopping " ><span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">+99 <span className="visually-hidden">unread messages</span></span></i>
+            </button>
+            </div>
+          
+            <form className="d-flex justify-content-end col-12 col-md-8 px-md-5 order-sm-1 my-2 my-md-0" role="search">
               <input className="form-control me-2" type="search" autoComplete="off" id="searchInput" placeholder="Search" aria-label="Search"/>
               {/* <button className="btn btn-outline-light" type="submit">Search</button> */}
             </form>
@@ -35,16 +23,12 @@ function NavBar() {
             <div className="card position-absolute mt-1 overflow-scroll d-none" id="suggests">
               
             </div>
-
-        </li>
-        <li className="">
-            <button type="button" className="bg-pink-regalarte cart-icon btn position-relative">
-            <i className=" text-white fa-solid fa-cart-shopping " ><span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">+99 <span className="visually-hidden">unread messages</span></span></i>
-            </button>
             
-        </li>
-      
-    </ul>
+            
+        </div>
+
+   </div>
+    
   
   <nav className="navbar navbar-expand-lg navbar-dark bg-pink-regalarte py-2">
 
