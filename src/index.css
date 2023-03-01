@@ -1,3 +1,31 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.mainNav{
+    list-style-type: none;
+}
+
+.regalarte-nav-logo{
+    width: 10rem;
+}
+
+.pink-regalarte{
+    color: #C11B53;
+}
+
+.bg-pink-regalarte{
+    background-color: #C11B53;
+}
+
+.cart-icon:hover{
+    background-color: #ff4a87;
+    box-shadow: #C11B53 0px 5px 15px;
+}
+
+.main-slideshow{
+    width: 100vw;
+    height: 15rem;
+}
+
+.main-slideshow img{
+    width: 1rem;
+    height: 15rem;
+    object-fit: contain;
+}
