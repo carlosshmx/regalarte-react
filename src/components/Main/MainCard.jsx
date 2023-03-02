@@ -1,7 +1,7 @@
 function MainCard({card}) {
   return (
     <>
-      <div className="card home-card">
+      <div className="card home-card bg-light">
         <img src={card.imgUrl} className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">{card.title}</h5>

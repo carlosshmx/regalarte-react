@@ -34,3 +34,13 @@
 .home-card{
     width: 18rem;
 }
+
+.product-overview{
+    max-height: 30rem
+}
+
+.product-slideshow-img{
+    width: 1rem;
+    height: 30rem;
+    object-fit: cover;
+}
