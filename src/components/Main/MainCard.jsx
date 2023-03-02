@@ -1,3 +1,7 @@
+import { Link } from "react-router-dom";
+
+const productId = 198;
+
 function MainCard({card}) {
   return (
     <>
@@ -8,9 +12,9 @@ function MainCard({card}) {
           <p className="card-text">
             {card.desciption}
           </p>
-          <a href="#" className="btn bg-pink-regalarte text-white icon-shadow">
+          <Link to={`/user/${productId}`} className="btn bg-pink-regalarte text-white icon-shadow">
             Ver mas...
-          </a>
+          </Link>
         </div>
       </div>
     </>
