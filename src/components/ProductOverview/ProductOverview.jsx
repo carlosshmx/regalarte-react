@@ -1,9 +1,48 @@
 import ProductCard from "./InfoCard";
 import ProductPics from "./ProductPics";
+import React, { useRef } from 'react';
+
 
 function ProductOverview(){
+    const imgRef = useRef(null);
 
+    function modalView(img){
+      var myModal = new bootstrap.Modal(document.getElementById('PhotoModal'), {
+        keyboard: false
+      })
+      console.log(`La imagen tiene la URL: ${imgRef.current.src}`)
+      myModal.toggle();
+    }
+    
     return(
+      <>
+      {/* MODAL */}
+     
+      <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#PhotoModal">
+        Launch demo modal
+        </button>
+
+    
+        <div className="modal fade" id="PhotoModal" tabIndex="-1" aria-labelledby="PhotoModalLabel" aria-hidden="true">
+        <div className="modal-dialog">
+            <div className="modal-content">
+            <div className="modal-header">
+                <h1 className="modal-title fs-5" id="PhotoModalLabel">Modal title</h1>
+                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div className="modal-body">
+                ...
+            </div>
+            <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" className="btn btn-primary">Save changes</button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+
+   
         <div className="col-lg-8 col-sm-12 mx-auto border bg-light mt-3">
 
         {/* ARTICULO */}
@@ -19,11 +58,11 @@ function ProductOverview(){
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="5000">
-            <img src="https://res.cloudinary.com/carlosshmc/image/upload/v1626985089/Regalarte/IMG-20201218-WA0008-01_fgun5y.jpg" className="d-block w-100 product-slideshow-img" alt="..."/>
+            <img src="https://res.cloudinary.com/carlosshmc/image/upload/v1626985089/Regalarte/IMG-20201218-WA0008-01_fgun5y.jpg" className="d-block w-100 product-slideshow-img" alt="..." onClick={()=>modalView()} ref={imgRef}/>
           </div>
 
           <div className="carousel-item" data-bs-interval="5000">
-            <img src="https://res.cloudinary.com/carlosshmc/image/upload/v1626985089/Regalarte/IMG-20201218-WA0008-01_fgun5y.jpg" className="d-block w-100 product-slideshow-img" alt="..."/>
+            <img src="https://res.cloudinary.com/carlosshmc/image/upload/v1626985089/Regalarte/IMG-20201024-WA0035-01_mmqnrp.jpg" className="d-block w-100 product-slideshow-img" alt="..." onClick={()=>modalView()} ref={imgRef}/>
           </div>
 
           <div className="carousel-item" data-bs-interval="5000">
@@ -60,6 +99,8 @@ function ProductOverview(){
       </div>
   </div>
 </div>
+
+        
 
 
 
@@ -111,7 +152,7 @@ function ProductOverview(){
 
       </div>
       
-
+      </>
       
     )
 }
