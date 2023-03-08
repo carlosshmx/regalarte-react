@@ -3,14 +3,26 @@ import ProductPics from "./ProductPics";
 import React, { useRef } from 'react';
 
 
+
+
 function ProductOverview(){
     const imgRef = useRef(null);
 
-    function modalView(img){
+    const carouselImg = [
+      "https://res.cloudinary.com/carlosshmc/image/upload/v1626985089/Regalarte/IMG-20201218-WA0008-01_fgun5y.jpg",
+      "https://res.cloudinary.com/carlosshmc/image/upload/v1626985089/Regalarte/IMG-20201024-WA0035-01_mmqnrp.jpg",
+      "https://res.cloudinary.com/carlosshmc/image/upload/v1626985089/Regalarte/IMG-20201024-WA0035-01_mmqnrp.jpg",
+      "https://res.cloudinary.com/carlosshmc/image/upload/v1626985089/Regalarte/IMG-20201024-WA0035-01_mmqnrp.jpg",
+      "https://res.cloudinary.com/carlosshmc/image/upload/v1626985089/Regalarte/IMG-20201024-WA0035-01_mmqnrp.jpg"
+    ]
+
+    function modalView(str){
+      console.log(str)
       var myModal = new bootstrap.Modal(document.getElementById('PhotoModal'), {
         keyboard: false
       })
-      console.log(`La imagen tiene la URL: ${imgRef.current.src}`)
+      document.querySelector(".modal-body").innerHTML = `<img src=${str}/>`
+      // console.log(`La imagen tiene la URL: ${imgRef.current.src}`)
       myModal.toggle();
     }
     
@@ -31,7 +43,7 @@ function ProductOverview(){
                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
-                ...
+                
             </div>
             <div className="modal-footer">
                 <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -58,7 +70,7 @@ function ProductOverview(){
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="5000">
-            <img src="https://res.cloudinary.com/carlosshmc/image/upload/v1626985089/Regalarte/IMG-20201218-WA0008-01_fgun5y.jpg" className="d-block w-100 product-slideshow-img" alt="..." onClick={()=>modalView()} ref={imgRef}/>
+            <img src={carouselImg[0]} className="d-block w-100 product-slideshow-img" alt="..." onClick={()=>modalView(carouselImg[0])} ref={imgRef}/>
           </div>
 
           <div className="carousel-item" data-bs-interval="5000">
