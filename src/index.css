@@ -55,6 +55,6 @@
 }
 
 .img-modal{
-
-    object-fit: cover;
+    width: 100%;
+    object-fit: contain;
 }

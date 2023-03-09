@@ -1,12 +1,7 @@
-import ProductCard from "./InfoCard";
-import ProductPics from "./ProductPics";
 import React, { useRef } from 'react';
-
-
-
+import PhotoModal from "./PhotoModal";
 
 function ProductOverview(){
-    const imgRef = useRef(null);
 
     const carouselImg = [
       "https://res.cloudinary.com/carlosshmc/image/upload/v1626985089/Regalarte/IMG-20201218-WA0008-01_fgun5y.jpg",
@@ -16,40 +11,37 @@ function ProductOverview(){
       "https://res.cloudinary.com/carlosshmc/image/upload/v1626984428/Regalarte/IMG-20200930-WA0069-01_gru6xo.jpg"
     ]
 
+    // RELLENADO DE BOTONES DEL SLIDE
+    let slidesToShow = [<button key="0" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>];
+
+    for(let i=1; i<carouselImg.length; i++){slidesToShow.push(<button type="button" key={i} data-bs-target="#carouselExampleDark" data-bs-slide-to={i} aria-label={"Slide " + i}></button>)}
+
+    // RELLENADO DE LAS IMAGENES DEL SLIDE
+    let imagesToShow = [<div key="0" className="carousel-item active" data-bs-interval="5000">
+    <img src={carouselImg[0]} className="d-block w-100 product-slideshow-img" alt="..." onClick={()=>modalView(carouselImg[0])}/>
+    </div>];
+
+    for(let i=1; i<carouselImg.length; i++){imagesToShow.push(<div key={i} className="carousel-item" data-bs-interval="5000">
+    <img src={carouselImg[i]} className="d-block w-100 product-slideshow-img" alt="..." onClick={()=>modalView(carouselImg[i])} />
+    </div>)}
+
+    // FUNCION LLAMADO A MODAL CON IMAMGEN CLICKEADA
     async function modalView(str){
       const img = await fetch(str)
       var myModal = new bootstrap.Modal(document.getElementById('PhotoModal'), {
         keyboard: false
       })
-      document.querySelector(".modal-body").innerHTML = `<img src="${img.url}" className="d-block "/>`
-      // console.log(`La imagen tiene la URL: ${imgRef.current.src}`)
+      document.querySelector(".modal-body").innerHTML = `<img src="${img.url}" class="d-block img-modal"/> 
+      <button type="button" class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal" aria-label="Close"></button>`
       myModal.toggle();
     }
+
     
     return(
       <>
       {/* MODAL */}
-     
-      <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#PhotoModal">
-        Launch demo modal
-        </button>
+        <PhotoModal/>
 
-    
-        <div className="modal fade" id="PhotoModal" tabIndex="-1" aria-labelledby="PhotoModalLabel" aria-hidden="true">
-        <div className="modal-dialog">
-            <div className="modal-content modal-w">
-              <div className="modal-header">
-                  <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div className="modal-body p-0 m-0 d-flex justify-content-center ">
-                
-            </div>
-            </div>
-        </div>
-        </div>
-
-
-   
         <div className="col-lg-8 col-sm-12 mx-auto border bg-light mt-3">
 
         {/* ARTICULO */}
@@ -58,27 +50,14 @@ function ProductOverview(){
 
         <div id="carouselExampleDark" className="col-sm-12 col-lg-8 carousel carousel-dark slide product-overview" data-bs-ride="carousel">
         <div className="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+
+          {slidesToShow}
+ 
         </div>
         <div className="carousel-inner">
-          <div className="carousel-item active" data-bs-interval="5000">
-            <img src={carouselImg[0]} className="d-block w-100 product-slideshow-img" alt="..." onClick={()=>modalView(carouselImg[0])} ref={imgRef}/>
-          </div>
 
-          <div className="carousel-item" data-bs-interval="5000">
-            <img src={carouselImg[1]} className="d-block w-100 product-slideshow-img" alt="..." onClick={()=>modalView(carouselImg[1])} ref={imgRef}/>
-          </div>
-
-          <div className="carousel-item" data-bs-interval="5000">
-            <img src={carouselImg[2]} className="d-block w-100 product-slideshow-img" alt="..." onClick={()=>modalView(carouselImg[2])} ref={imgRef}/>
-          </div>
-
-          <div className="carousel-item" data-bs-interval="5000">
-            <img src={carouselImg[3]} className="d-block w-100 product-slideshow-img" alt="..." onClick={()=>modalView(carouselImg[3])} ref={imgRef}/>
-          </div>
+          {imagesToShow}
+         
 
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
@@ -108,10 +87,6 @@ function ProductOverview(){
 </div>
 
         
-
-
-
-
 
         {/* COMENTARIOS */}
 
