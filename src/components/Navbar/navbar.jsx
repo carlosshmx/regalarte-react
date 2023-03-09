@@ -11,9 +11,9 @@ function NavBar() {
             
             
             <div className="col-6 col-md-2 d-flex justify-content-end order-sm-2">
-              <button type="button" className="bg-pink-regalarte icon-shadow btn position-relative me-3 me-md-2 me-lg-0">
-              <i className=" text-white fa-solid fa-cart-shopping " ><span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">+99 <span className="visually-hidden">unread messages</span></span></i>
-            </button>
+              <NavLink to="/cart" className="bg-pink-regalarte icon-shadow btn  position-relative me-3 me-md-2 me-lg-0">
+                  <i className=" text-white fa-solid fa-cart-shopping pt-2"><span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">+99 <span className="visually-hidden">unread messages</span></span></i>
+              </NavLink>
             </div>
           
             <form className="d-flex justify-content-end col-12 col-md-8 px-md-5 order-sm-1 my-2 my-md-0" role="search">
