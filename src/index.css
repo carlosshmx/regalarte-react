@@ -1,3 +1,7 @@
+#root{
+    background-color: rgb(227, 227, 227);
+}
+
 .mainNav{
     list-style-type: none;
 }
@@ -59,12 +63,12 @@
     object-fit: contain;
 }
 
-.item-col{
-    max-height: 10rem;
-    object-fit: contain;
+.cart-item{
+    max-height: 13rem;
 }
 
-.img-cart-item{
+.cart-img-item{
     width: 100%;
-    object-fit: contain;
+    height: 50rem;
+    object-fit: cover;
 }
