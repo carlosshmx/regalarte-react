@@ -58,3 +58,13 @@
     width: 100%;
     object-fit: contain;
 }
+
+.item-col{
+    max-height: 10rem;
+    object-fit: contain;
+}
+
+.img-cart-item{
+    width: 100%;
+    object-fit: contain;
+}
