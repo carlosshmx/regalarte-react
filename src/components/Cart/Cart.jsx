@@ -15,7 +15,7 @@ export default function Cart() {
                 <img
                   src="https://res.cloudinary.com/carlosshmc/image/upload/v1626985688/Regalarte/IMG-20200917-WA0046-01_gr04zc.jpg"
                   className="cart-item cart-img-item"
-                  alt="Imagen del producto"
+                  alt="Imagen del producto "
                 />
               </div>
               <div className="col-4 col-md-6">
