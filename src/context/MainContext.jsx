@@ -1,10 +1,12 @@
 import { createContext, useState, useEffect} from "react";
 import { mainCards as dataCards } from "../data/mainCards";
+import { items } from "../data/CartData";
 
 export const MainContext = createContext()
 
 export function MainContextProvider(props){
   const [cards, setCards] = useState([])
+  const[totalPrice, setTotalPrice] = useState(0)
 
   function createMainCard(card){
     setCards([...cards,{
@@ -16,13 +18,21 @@ export function MainContextProvider(props){
     }])
   }
 
+  function totalizeCart(){
+    setTotalPrice(0);
+    let total = 0;
+    items.map((item)=>{total = total+item.precio})
+    setTotalPrice(total);
+  }
+
   useEffect(()=>{
-    setCards(dataCards)
+    setCards(dataCards);
+    totalizeCart()
   }, [])
 
 
   return(
-    <MainContext.Provider value={{cards, createMainCard}}>
+    <MainContext.Provider value={{cards, createMainCard, totalPrice, setTotalPrice}}>
       {props.children}
     </MainContext.Provider>
   )

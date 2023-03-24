@@ -1,10 +1,17 @@
 import { useState } from "react";
+import { MainContext } from "../../context/MainContext";
+import { useContext } from "react";
 
 export default function CartItem(props){
+
+    const{setTotalPrice} = useContext(MainContext);
     
     const[imputValue, setImputValue] =  useState(props.qty);
     const[price, setPrice] = useState(props.precio*props.qty)
 
+    function updateCart(){
+      
+    }
 
     function handleChange(event) {
         setImputValue(Number(event.target.value));
@@ -13,7 +20,7 @@ export default function CartItem(props){
     
     return(
 
-        <div className="">
+        <div>
             
         <div className="row align-items-center">
           <div className="col-6 col-md-3 cart-item">
