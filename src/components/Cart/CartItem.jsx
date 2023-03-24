@@ -10,7 +10,6 @@ export default function CartItem(props){
         setImputValue(Number(event.target.value));
       }
 
-
     
     return(
 
