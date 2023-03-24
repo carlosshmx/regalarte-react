@@ -31,8 +31,8 @@ function Home() {
           DULCES CAPRICHOS PARA TODOS LOS GUSTOS
         </h1>
         <div className="flex gap-6 justify-center flex-wrap">
-            {products.map((item) => (
-                <ProductCard item={item}/>
+            {products.map((item, index) => (
+                <ProductCard item={item} key={index}/>
             ))}
         </div>
         
