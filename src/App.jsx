@@ -9,6 +9,7 @@ import ProductPage from "./pages/ProductPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import UserPage from "./pages/UserPage";
 import Cart from "./components/Cart/Cart";
+import Categories from "./components/Categories/Categories";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/product" element={<ProductPage/>}/>
           <Route path="/user/:userId" element={<UserPage/>}/>
           <Route path="/cart" element={<Cart/>}/>
+          <Route path="/categories" element={<Categories/>}/>
           <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
       </BrowserRouter>
