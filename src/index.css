@@ -74,3 +74,15 @@
     
 }
 
+.category-card{
+    min-height: 5rem;
+    max-height: 10rem;
+    height: 100%;
+    width: 100%;
+}
+
+.categorie-img-card{
+    max-width: 100%;
+    max-height: 9rem;
+    object-fit: contain;
+}
