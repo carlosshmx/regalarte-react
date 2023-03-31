@@ -1,4 +1,4 @@
-import { DolarData } from "../../data/CartData"
+import { DolarData } from "../../data/ProductsData"
 export default function TotalBox(props){
 
     async function showdata(){

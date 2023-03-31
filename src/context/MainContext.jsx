@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect} from "react";
 import { mainCards as dataCards } from "../data/mainCards";
-import { items } from "../data/CartData";
+import { items } from "../data/ProductsData";
 
 export const MainContext = createContext()
 
@@ -32,7 +32,7 @@ export function MainContextProvider(props){
 
 
   return(
-    <MainContext.Provider value={{cards, createMainCard, totalPrice, setTotalPrice}}>
+    <MainContext.Provider value={{items, cards, createMainCard, totalPrice, setTotalPrice}}>
       {props.children}
     </MainContext.Provider>
   )

@@ -10,6 +10,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import UserPage from "./pages/UserPage";
 import Cart from "./components/Cart/Cart";
 import Categories from "./components/Categories/Categories";
+import ProductsMain from "./components/ProductList/ProductsMain";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
       <NavBar/>
         <Routes>
           <Route path="/" element={<HomePage/>}/>
-          <Route path="/product" element={<ProductPage/>}/>
+          <Route path="/product" element={<ProductsMain/>}/>
           <Route path="/user/:userId" element={<UserPage/>}/>
           <Route path="/cart" element={<Cart/>}/>
           <Route path="/categories" element={<Categories/>}/>

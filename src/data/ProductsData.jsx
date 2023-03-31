@@ -1,5 +1,6 @@
 export const items = [
     {
+        id:1,
         titulo:"Torta especial",
         variedad:"1kg, Vainilla",
         precio:25,
@@ -7,6 +8,7 @@ export const items = [
         qty:1
     },
     {
+        id:2,
         titulo:"Brownies",
         variedad:"Pack 8 Uunidades, chocolate y nueces",
         precio:10,
@@ -14,6 +16,7 @@ export const items = [
         qty:2
     },
     {
+        id:3,
         titulo:"Pasapalos",
         variedad:"Pack 60 piezas",
         precio:15,
@@ -21,6 +24,7 @@ export const items = [
         qty:3
     },
     {
+        id:4,
         titulo:"Mini donas",
         variedad:"Pack 12 unidades",
         precio:12,

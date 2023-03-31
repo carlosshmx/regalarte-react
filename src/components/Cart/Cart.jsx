@@ -1,5 +1,5 @@
 import CartItem from "./CartItem";
-import { items} from "../../data/CartData";
+import { items} from "../../data/ProductsData";
 import TotalBox from "./TotalBox";
 import { useState } from "react";
 import { MainContext } from "../../context/MainContext";
