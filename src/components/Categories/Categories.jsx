@@ -59,7 +59,7 @@ export default function Categories() {
           <div className="card-body ">
             <blockquote className="blockquote mb-0 row mx-auto align-items-center category-card">
               <img
-                src="https://res.cloudinary.com/carlosshmc/image/upload/v1680235703/Regalarte/removal.ai__tmp-64265b5e8d9fb_zutjiu.png"
+                src="https://res.cloudinary.com/carlosshmc/image/upload/v1680236928/Regalarte/removalai__tmp-64265b5e8d9fb_r14grq.png"
                 alt=""
                 className="col-7 categorie-img-card"
               />
@@ -80,7 +80,7 @@ export default function Categories() {
               </div>
 
               <img
-                src="https://res.cloudinary.com/carlosshmc/image/upload/v1680235703/Regalarte/removal.ai__tmp-64265bedc2eba_lrka36.png"
+                src="https://res.cloudinary.com/carlosshmc/image/upload/v1680236928/Regalarte/removalai__tmp-64265bedc2eba_obcigy.png"
                 alt=""
                 className="col-7 categorie-img-card"
               />
