@@ -22,9 +22,9 @@ export default function Categories() {
         </div>
       </div>
 
-        <div className="card col-md-6 col-12">
+        <div className=" card  col-md-6 col-12">
           <div className="card-body ">
-            <blockquote className="blockquote mb-0 row justify-content-center align-items-center category-card">
+            <blockquote className="blockquote mb-0 row mx-auto align-items-center category-card">
               <img
                 src="https://res.cloudinary.com/carlosshmc/image/upload/v1680117847/Regalarte/removal.ai__tmp-64248ff009754_coz7t5.png"
                 alt=""
@@ -39,7 +39,7 @@ export default function Categories() {
         </div>
         <div className="card col-md-6 col-12">
           <div className="card-body">
-            <blockquote className="blockquote mb-0 row justify-content-center align-items-center category-card">
+            <blockquote className="blockquote mb-0 row mx-auto align-items-center category-card">
 
               <div className="col-5 d-flex justify-content-center">
                 <h2>Donuts</h2>
@@ -53,6 +53,43 @@ export default function Categories() {
             </blockquote>
           </div>
         </div>
+
+
+        <div className=" card  col-md-6 col-12">
+          <div className="card-body ">
+            <blockquote className="blockquote mb-0 row mx-auto align-items-center category-card">
+              <img
+                src="https://res.cloudinary.com/carlosshmc/image/upload/v1680235703/Regalarte/removal.ai__tmp-64265b5e8d9fb_zutjiu.png"
+                alt=""
+                className="col-7 categorie-img-card"
+              />
+              <div className="col-5 d-flex justify-content-center">
+                <h2>Pizza</h2>
+              </div>
+
+            </blockquote>
+          </div>
+        </div>
+
+        <div className="card col-md-6 col-12">
+          <div className="card-body">
+            <blockquote className="blockquote mb-0 row mx-auto align-items-center category-card">
+
+              <div className="col-5 d-flex justify-content-center">
+                <h2>Tequeños</h2>
+              </div>
+
+              <img
+                src="https://res.cloudinary.com/carlosshmc/image/upload/v1680235703/Regalarte/removal.ai__tmp-64265bedc2eba_lrka36.png"
+                alt=""
+                className="col-7 categorie-img-card"
+              />
+            </blockquote>
+          </div>
+        </div>
+
+
+
     </div>
   );
 }
