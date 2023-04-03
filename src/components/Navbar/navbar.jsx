@@ -41,18 +41,21 @@ function NavBar() {
       </button>
       
       <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav w-100 lower-bar justify-content-between">
+        <ul className="navbar-nav w-100 justify-content-around fw-bold">
           <li className="nav-item">
             <NavLink className={({isActive}) => 'nav-link' + (isActive ? ' active':'')} to="/">Inicio</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className={({isActive}) => 'nav-link' + (isActive ? ' active':'')} to="/Categories">Categorías</NavLink>
+            <NavLink className={({isActive}) => 'nav-link' + (isActive ? ' active':'')} to="/cakes">Cakes</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className={({isActive}) => 'nav-link' + (isActive ? ' active':'')} to="/product">Producto</NavLink>
+            <NavLink className={({isActive}) => 'nav-link' + (isActive ? ' active':'')} to="/donutscupcakes">Donuts & Cupcakes</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className={({isActive}) => 'nav-link' + (isActive ? ' active':'')} to="/User">Usuario</NavLink>
+            <NavLink className={({isActive}) => 'nav-link' + (isActive ? ' active':'')} to="/pasapalos">Pasapalos</NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className={({isActive}) => 'nav-link' + (isActive ? ' active':'')} to="/combos">Combos</NavLink>
           </li>
         </ul>
 

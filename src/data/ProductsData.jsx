@@ -10,7 +10,7 @@ export const items = [
     {
         id:2,
         titulo:"Brownies",
-        variedad:"Pack 8 Uunidades, chocolate y nueces",
+        variedad:"Pack 8 Uunidades",
         precio:10,
         imgUrl:"https://res.cloudinary.com/carlosshmc/image/upload/v1626985089/Regalarte/IMG-20201219-WA0031-01_ggyg37.jpg",
         qty:2
