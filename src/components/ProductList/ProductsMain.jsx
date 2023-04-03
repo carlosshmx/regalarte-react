@@ -3,8 +3,8 @@ import ProductCard from "./ProfuctCard";
 
 export default function ProductsMain() {
   return (
-    <div className="container">
-        <div className="d-flex">
+    <div className="container mt-4">
+        <div className="">
             <AsideMenu/>
             
         </div>

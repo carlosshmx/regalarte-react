@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function ProductCard({card}){
     return (
         <>
-          <div className="card home-card bg-light">
+          <div className="card home-card bg-light col-3">
             <img src={card.imgUrl} className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">{card.titulo}</h5>

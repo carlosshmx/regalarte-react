@@ -12,7 +12,7 @@ export default function AsideMenu(){
           <button className="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Tequeños</button>
         </div>
         <div className="tab-content" id="v-pills-tabContent">
-          <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabIndex="0"><ProductsCardList/></div>
+          <div className="tab-pane fade show active " id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabIndex="0"><ProductsCardList/></div>
           <div className="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabIndex="0">...</div>
           <div className="tab-pane fade" id="v-pills-donuts" role="tabpanel" aria-labelledby="v-pills-donuts-tab" tabIndex="0">...</div>
           <div className="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabIndex="0">...</div>
