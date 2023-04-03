@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import ProductOverview from "../ProductOverview/ProductOverview"
 
 export default function ProductCard({card}){
     return (
         <>
-          <Link className="card product-card bg-light col-3 text-decoration-none text-dark p-0">
+          <Link className="card product-card bg-light col-3 text-decoration-none text-dark p-0" to={"/product/sampleID"}>
             <img src={card.imgUrl} className="card-img-top" alt="..." />
             <div className="card-body ">
               <h5 className="card-title">{card.titulo}</h5>

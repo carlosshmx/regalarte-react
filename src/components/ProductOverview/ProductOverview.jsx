@@ -1,7 +1,11 @@
 import React, { useRef } from 'react';
 import PhotoModal from "./PhotoModal";
+import { useParams } from "react-router-dom"
+
 
 function ProductOverview(){
+
+    const{prodId}= useParams();
 
     const carouselImg = [
       "https://res.cloudinary.com/carlosshmc/image/upload/v1626985089/Regalarte/IMG-20201218-WA0008-01_fgun5y.jpg",
@@ -72,7 +76,7 @@ function ProductOverview(){
 
       <div className=" col-sm-12 col-lg-4 d-flex flex-column border">
         <p className="mb-0 mt-2">Vendidos: 10</p>
-        <h4 className="pt-2">Suspiros</h4>
+        <h4 className="pt-2">Producto: {prodId}</h4>
       <div className="d-flex">
         5 strellas
         <a href="#comments" className="ms-2 text-decoration-none">10 Calificaciones</a>
