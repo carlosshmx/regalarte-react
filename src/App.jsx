@@ -24,6 +24,7 @@ function App() {
           <Route path="/cart" element={<Cart/>}/>
           <Route path="/cakes" element={<ProductsMain/>}/>
           <Route path="/donutscupcakes" element={<ProductsMain/>}/>
+          <Route path="/pasapalos" element={<ProductsMain/>}/>
           <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
       </BrowserRouter>

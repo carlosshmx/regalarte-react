@@ -1,13 +1,14 @@
+import { Link } from "react-router-dom";
 export default function Categories() {
   return (
     <div className="container mx-auto row">
-      <div className="card col-12">
-        <div className="card-body">
-          <blockquote className="blockquote mb-0 row justify-content-center align-items-center">
+      <div className="card col-12 px-0">
+        <Link className="card-body text-decoration-none text-dark" to={"/cakes"}>
+          <blockquote className="blockquote mb-0 row justify-content-center align-items-center category-card">
             <img
               src="https://res.cloudinary.com/carlosshmc/image/upload/v1680115274/Regalarte/removal.ai__tmp-642485c036177_dfyin7.png"
               alt=""
-              className="col-3"
+              className="col-3 categorie-img-card"
             />
             <div className="col-6 d-flex justify-content-center">
               <h2>Cakes</h2>
@@ -16,14 +17,14 @@ export default function Categories() {
             <img
               src="https://res.cloudinary.com/carlosshmc/image/upload/v1680115274/Regalarte/removal.ai__tmp-642486160cb47_vcmz94.png"
               alt=""
-              className="col-3"
+              className="col-3 categorie-img-card"
             />
           </blockquote>
-        </div>
+        </Link>
       </div>
 
-        <div className=" card  col-md-6 col-12">
-          <div className="card-body ">
+        <div  className=" card  col-md-6 col-12 px-0">
+          <Link to={"/donutscupcakes"} className="card-body text-decoration-none text-dark">
             <blockquote className="blockquote mb-0 row mx-auto align-items-center category-card">
               <img
                 src="https://res.cloudinary.com/carlosshmc/image/upload/v1680117847/Regalarte/removal.ai__tmp-64248ff009754_coz7t5.png"
@@ -35,10 +36,10 @@ export default function Categories() {
               </div>
 
             </blockquote>
-          </div>
+          </Link>
         </div>
-        <div className="card col-md-6 col-12">
-          <div className="card-body">
+        <div className="card col-md-6 col-12 px-0">
+          <Link to={"/donutscupcakes"} className="card-body text-decoration-none text-dark">
             <blockquote className="blockquote mb-0 row mx-auto align-items-center category-card">
 
               <div className="col-5 d-flex justify-content-center">
@@ -51,12 +52,12 @@ export default function Categories() {
                 className="col-7 categorie-img-card"
               />
             </blockquote>
-          </div>
+          </Link>
         </div>
 
 
-        <div className=" card  col-md-6 col-12">
-          <div className="card-body ">
+        <div className=" card  col-md-6 col-12 px-0">
+          <Link to={"/pasapalos"} className="card-body text-decoration-none text-dark">
             <blockquote className="blockquote mb-0 row mx-auto align-items-center category-card">
               <img
                 src="https://res.cloudinary.com/carlosshmc/image/upload/v1680236928/Regalarte/removalai__tmp-64265b5e8d9fb_r14grq.png"
@@ -68,11 +69,11 @@ export default function Categories() {
               </div>
 
             </blockquote>
-          </div>
+          </Link>
         </div>
 
-        <div className="card col-md-6 col-12">
-          <div className="card-body">
+        <div className="card col-md-6 col-12 px-0">
+          <Link to={"/pasapalos"} className="card-body text-decoration-none text-dark">
             <blockquote className="blockquote mb-0 row mx-auto align-items-center category-card">
 
               <div className="col-5 d-flex justify-content-center">
@@ -85,7 +86,7 @@ export default function Categories() {
                 className="col-7 categorie-img-card"
               />
             </blockquote>
-          </div>
+          </Link>
         </div>
 
 

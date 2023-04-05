@@ -1,13 +1,13 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
     <div className="bg-white">
    <div className="container mt-3 mb-0 mb-md-2 px-2 my-lg-3">
       <div className="position-relative row bg-white">
-            <div className="col-6 col-md-2">
+            <Link to={"/"} className="col-6 col-md-2">
             <img className="regalarte-nav-logo" src="https://res.cloudinary.com/carlosshmc/image/upload/v1677018362/regalarte_letras_nml55d.png" alt="" />
-            </div>
+            </Link>
             
             
             <div className="col-6 col-md-2 d-flex justify-content-end order-sm-2">

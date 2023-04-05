@@ -83,15 +83,17 @@
 }
 
 .category-card{
-    min-height: 5rem;
-    max-height: 10rem;
-    height: 100%;
-    width: 100%;
+    min-height: 6rem;
+    max-height: 8rem;
+}
+
+.card:hover{
+    background-color: #d4115237;
 }
 
 .categorie-img-card{
     max-width: 100%;
-    max-height: 9rem;
+    max-height: 6rem;
     object-fit: contain;
 }
 
