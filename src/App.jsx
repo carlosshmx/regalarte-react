@@ -10,11 +10,11 @@ import Cart from "./components/Cart/Cart";
 import Categories from "./components/Main/Categories";
 import ProductsMain from "./components/ProductList/ProductsMain";
 import Home from "./components/Main/Home";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <>
-      
+    <div className="d-flex flex-column min-vh-100">
       <BrowserRouter>
       <NavBar/>
         <Routes>
@@ -27,8 +27,9 @@ function App() {
           <Route path="/pasapalos" element={<ProductsMain/>}/>
           <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
+      <Footer/>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

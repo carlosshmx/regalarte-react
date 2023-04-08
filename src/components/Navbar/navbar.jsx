@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import User from "./User";
 
 function NavBar() {
   return (
@@ -10,7 +11,10 @@ function NavBar() {
             </Link>
             
             
-            <div className="col-6 col-md-2 d-flex justify-content-end order-sm-2">
+            <div className="col-6 col-md-2 d-flex justify-content-end order-sm-2"> 
+
+              <User/>
+
               <NavLink to="/cart" className="bg-pink-regalarte icon-shadow btn  position-relative me-3 me-md-2 me-lg-0">
                   <i className=" text-white fa-solid fa-cart-shopping pt-2"><span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">+99 <span className="visually-hidden">unread messages</span></span></i>
               </NavLink>

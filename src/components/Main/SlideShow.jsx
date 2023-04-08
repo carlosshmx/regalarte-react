@@ -1,6 +1,6 @@
 function SlideShow(){
     return(
-        <div className="d-none d-md-block">
+        <div className="d-none d-md-block w-100">
             <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
   <div className="carousel-inner main-slideshow">
     <div className="carousel-item active " data-bs-interval="5000">

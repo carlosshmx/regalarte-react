@@ -46,21 +46,20 @@ function ProductOverview(){
       {/* MODAL */}
         <PhotoModal/>
 
-        <div className="col-lg-8 col-sm-12 mx-auto border bg-light mt-3">
+        <div className="col-lg-8 col-md-10 col-sm-12 mx-auto border bg-light mt-3 flex-grow-1">
 
         {/* ARTICULO */}
         <div className="mt-4 row mx-auto">
-    <div className="col-12 row mx-auto ">
+          <div className="col-12 row mx-auto ">
+            <div id="carouselExampleDark" className="col-sm-12 col-lg-7 carousel carousel-dark slide product-overview p-0" data-bs-ride="carousel">
+            <div className="carousel-indicators">
 
-        <div id="carouselExampleDark" className="col-sm-12 col-lg-8 carousel carousel-dark slide product-overview" data-bs-ride="carousel">
-        <div className="carousel-indicators">
-
-          {slidesToShow}
+            {slidesToShow}
  
         </div>
         <div className="carousel-inner">
 
-          {imagesToShow}
+              {imagesToShow}
          
 
         </div>
@@ -74,18 +73,37 @@ function ProductOverview(){
         </button>
       </div>
 
-      <div className=" col-sm-12 col-lg-4 d-flex flex-column border">
-        <p className="mb-0 mt-2">Vendidos: 10</p>
+      <div className=" col-sm-12 col-lg-5 d-flex flex-column border">
         <h4 className="pt-2">Producto: {prodId}</h4>
-      <div className="d-flex">
-        5 strellas
-        <a href="#comments" className="ms-2 text-decoration-none">10 Calificaciones</a>
-      </div>
-        <h2 className="p-2">UDS 10</h2>
-        <p className="p-2">Descripcion</p>
-        <p className="p-2 color-dark"><i className="fa-solid fa-truck"></i> Envios gratis a todo el pais</p>
+        <p className="p-2">Descripcion detallada del producto que se esta mostrando, hay selectores que permiten hacer variedades y esto modifica a su vez el precio</p>
+        <h5>Personaliza tu pedido</h5>
+        <div className='mb-1'>
+            <select class="form-select" aria-label="Default select example">
+              <option disabled selected value="0">Tamaño</option>
+              <option value="1">1kg - 16 Porciones</option>
+              <option value="2">1/2kg - 8 Porciones</option>
+              <option value="3">1/4kg - 4 Porciones</option>
+            </select>
+        </div>
+        <div className='mb-1'>
+            <select class="form-select" aria-label="Default select example">
+              <option disabled selected value="0">Sabor</option>
+              <option value="1">Vainilla</option>
+              <option value="2">Chocolate</option>
+              <option value="3">Marmoleada</option>
+            </select>
+        </div>
+        <div className='mb-1'>
+            <select class="form-select" aria-label="Default select example">
+              <option disabled selected value="0">Cubierta</option>
+              <option value="1">Merenge Italiano</option>
+              <option value="2">Buttercream</option>
+            </select>
+        </div>
+        <h2 className="p-2 mt-auto">UDS 10</h2>
+        <p className="p-2 color-dark"><i className="fa-solid fa-truck"></i> Delivery disponible</p>
 
-        <button type="button" className="mt-auto mb-4 p-2 btn btn-primary fw-bold">Agregar al carrito</button>
+        <button type="button" className="mt-auto mb-4 p-2 btn btn-primary fw-bold bg-pink-regalarte icon-shadow border-0">Agregar al carrito</button>
       </div>
   </div>
 </div>

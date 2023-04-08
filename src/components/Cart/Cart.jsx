@@ -11,7 +11,7 @@ export default function Cart() {
 
 
   return (
-    <div className="container mt-3  gap-1 row justify-content-md-center mx-auto">
+    <div className="container mt-3  gap-1 row justify-content-md-center mx-auto flex-grow-1">
       <div className="card col-md-8 bg-white mb-2 px-0">
         <div className="d-flex justify-content-between align-items-center">
           <h2 className="m-2">Carrito</h2>
