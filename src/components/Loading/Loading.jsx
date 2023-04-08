@@ -1,6 +1,7 @@
 export default function Loading(){
+
     return(
-            <div className="position-absolute loading-spiner-bg w-100 h-100">
+            <div className="position-absolute loading-spiner-bg w-100 h-100" id="loader">
                 <div className="loading-spiner-container">
                     <img src="https://res.cloudinary.com/carlosshmc/image/upload/v1677017782/regalarte_logo_png_tl8jqr.png" alt="" className="img-fluid loading-image"/>
                 </div> 

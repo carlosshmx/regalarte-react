@@ -4,6 +4,9 @@ import { useParams } from "react-router-dom"
 
 
 function ProductOverview(){
+  window.onload = function() {
+    document.getElementById("loader").style.display = "none";
+  };
 
     const{prodId}= useParams();
 
@@ -35,8 +38,8 @@ function ProductOverview(){
       var myModal = new bootstrap.Modal(document.getElementById('PhotoModal'), {
         keyboard: false
       })
-      document.querySelector(".modal-body").innerHTML = `<img src="${img.url}" class="d-block img-modal"/> 
-      <button type="button" class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal" aria-label="Close"></button>`
+      document.querySelector(".modal-body").innerHTML = `<img src="${img.url}" className="d-block img-modal"/> 
+      <button type="button" className="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal" aria-label="Close"></button>`
       myModal.toggle();
     }
 
@@ -78,7 +81,7 @@ function ProductOverview(){
         <p className="p-2">Descripcion detallada del producto que se esta mostrando, hay selectores que permiten hacer variedades y esto modifica a su vez el precio</p>
         <h5>Personaliza tu pedido</h5>
         <div className='mb-1'>
-            <select class="form-select" aria-label="Default select example">
+            <select className="form-select" aria-label="Default select example">
               <option disabled selected value="0">Tamaño</option>
               <option value="1">1kg - 16 Porciones</option>
               <option value="2">1/2kg - 8 Porciones</option>
@@ -86,7 +89,7 @@ function ProductOverview(){
             </select>
         </div>
         <div className='mb-1'>
-            <select class="form-select" aria-label="Default select example">
+            <select className="form-select" aria-label="Default select example">
               <option disabled selected value="0">Sabor</option>
               <option value="1">Vainilla</option>
               <option value="2">Chocolate</option>
@@ -94,7 +97,7 @@ function ProductOverview(){
             </select>
         </div>
         <div className='mb-1'>
-            <select class="form-select" aria-label="Default select example">
+            <select className="form-select" aria-label="Default select example">
               <option disabled selected value="0">Cubierta</option>
               <option value="1">Merenge Italiano</option>
               <option value="2">Buttercream</option>
