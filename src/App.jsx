@@ -11,11 +11,13 @@ import Categories from "./components/Main/Categories";
 import ProductsMain from "./components/ProductList/ProductsMain";
 import Home from "./components/Main/Home";
 import Footer from "./components/Footer/Footer";
+import Loading from "./components/Loading/Loading";
 
 function App() {
   return (
-    <div className="d-flex flex-column min-vh-100">
+    <div className="d-flex flex-column min-vh-100 position-relative">
       <BrowserRouter>
+      
       <NavBar/>
         <Routes>
           <Route path="/" element={<Home/>}/>

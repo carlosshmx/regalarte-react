@@ -106,3 +106,25 @@
     max-height: 6rem;
     object-fit: contain;
 }
+
+.loading-spiner-bg{
+    z-index: 100;
+    background-color: rgba(52, 52, 52, 0.486);
+
+}
+
+.loading-spiner-container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loading-image{
+    width: 15rem;
+}
+
+.loading-spiner{
+    width: 25rem;
+}
+
