@@ -16,16 +16,19 @@
 }
 
 .bg-pink-regalarte{
+    color: white;
     background-color: #C11B53;
 }
 
 .bg-pink-regalarte:focus{
+    color: white;
     background-color: #C11B53;
 }
 
 
 
 .icon-shadow:hover{
+    color: white;
     background-color: #ff4a87;
     box-shadow: #C11B53 0px 5px 15px;
 }
@@ -127,4 +130,3 @@
 .loading-spiner{
     width: 25rem;
 }
-

@@ -4,9 +4,9 @@ import { useParams } from "react-router-dom"
 
 
 function ProductOverview(){
-  window.onload = function() {
-    document.getElementById("loader").style.display = "none";
-  };
+  // window.onload = function() {
+  //   document.getElementById("loader").style.display = "none";
+  // };
 
     const{prodId}= useParams();
 

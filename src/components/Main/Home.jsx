@@ -3,6 +3,8 @@ import Categories from "./Categories";
 
 
 function Home() {
+
+
   return (
     <div className="flex-grow-1">
         <SlideShow/>

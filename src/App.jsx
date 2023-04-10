@@ -12,12 +12,13 @@ import ProductsMain from "./components/ProductList/ProductsMain";
 import Home from "./components/Main/Home";
 import Footer from "./components/Footer/Footer";
 import Loading from "./components/Loading/Loading";
+import AddItems from "./components/ControlPanel/AddItems";
 
 function App() {
   return (
     <div className="d-flex flex-column min-vh-100 position-relative">
       <BrowserRouter>
-      <Loading/>
+      {/* <Loading/> */}
       <NavBar/>
         <Routes>
           <Route path="/" element={<Home/>}/>
@@ -27,6 +28,7 @@ function App() {
           <Route path="/cakes" element={<ProductsMain/>}/>
           <Route path="/donutscupcakes" element={<ProductsMain/>}/>
           <Route path="/pasapalos" element={<ProductsMain/>}/>
+          <Route path="/createproduct" element={<AddItems/>}/>
           <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
       <Footer/>
