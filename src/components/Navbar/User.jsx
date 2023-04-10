@@ -13,7 +13,7 @@ export default function User(){
     const handleSubmit = (event) => {
         event.preventDefault(); 
 
-        console.log(inputUser == userlogin[0].user)
+        console.log(inputUser == userlogin[0].user && inputPass == userlogin[0].pass)
     
       };
 

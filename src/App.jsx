@@ -13,6 +13,7 @@ import Home from "./components/Main/Home";
 import Footer from "./components/Footer/Footer";
 import Loading from "./components/Loading/Loading";
 import AddItems from "./components/ControlPanel/AddItems";
+import UserProfile from "./components/ControlPanel/UserProfile";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/donutscupcakes" element={<ProductsMain/>}/>
           <Route path="/pasapalos" element={<ProductsMain/>}/>
           <Route path="/createproduct" element={<AddItems/>}/>
+          <Route path="/profile" element={<UserProfile/>}/>
           <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
       <Footer/>
