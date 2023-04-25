@@ -12,7 +12,9 @@ export default function UserProfile(){
                         <p>Telefono:</p>
                     </div>
                 </div>
-                <button type="button" class="btn bg-pink-regalarte icon-shadow">Editar</button>
+                
+                <button type="button" class="btn bg-pink-regalarte icon-shadow">Administrar Productos</button>
+                
             </div>
         </div>
     )
